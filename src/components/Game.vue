@@ -244,7 +244,6 @@ export default {
       }
     },
     checkAnswer(value){
-      this.playNote(Utils.getNearestNoteOfValue(value, this.currentExercise.value));
       if(value === this.currentExercise.value){
         this.onCorrectAnswer();
         this.generateNewExercise();
@@ -263,16 +262,6 @@ export default {
         navigator.vibrate(200);
       }
     },
-    playNote(value){
-      if(!this.options.sound){
-        return;
-      }
-      if(!!this.sample && !this.sample.paused){
-        this.sample.pause();
-      }
-      this.sample = new Audio('static/samples/piano/' + value + '.mp3');
-      this.sample.play();
-    }
   },
   mounted(){
     this.startGame();

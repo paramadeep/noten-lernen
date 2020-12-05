@@ -19,20 +19,10 @@
       </div>
       <div class="setting">
         <SelectOption
-          :label="$t('DIFFICULTY')"
-          :items="difficultyOptions"
-          v-model="options.difficulty"
-        />
-      </div>
-      <div class="setting">
-        <SelectOption
           :label="$t('ACCIDENTALS')"
           :items="accidentalOptions"
           v-model="options.accidentals"
         />
-      </div>
-      <div>
-        <SelectOption :label="$t('SOUND')" :items="soundOptions" v-model="options.sound"/>
       </div>
       <div>
         <SelectOption :label="$t('LANGUAGE')" :items="languageOptions" v-model="options.language"/>
@@ -77,13 +67,6 @@ export default {
         { value: "bass", label: this.$t("bassClef") },
         { value: "alto", label: this.$t("altoClef") },
         { value: "tenor", label: this.$t("tenorClef") }
-      ];
-    },
-    difficultyOptions() {
-      return [
-        { value: "easy", label: this.$t("easy") },
-        { value: "normal", label: this.$t("normal") },
-        { value: "hard", label: this.$t("hard") }
       ];
     },
     accidentalOptions() {

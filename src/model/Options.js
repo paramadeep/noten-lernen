@@ -3,9 +3,7 @@ import * as Lockr from "lockr";
 export default {
   gameLength: 60,
   clef: ["treble"],
-  difficulty: "easy",
   accidentals: "no",
-  sound: false,
   language: null,
 
   loadOptions() {
